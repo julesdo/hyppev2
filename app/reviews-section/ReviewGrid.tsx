@@ -53,7 +53,7 @@ const Reviews = () => {
           amount: "some",
           once: true,
         }}
-        href="https://contra.com"
+        href="https://contra.com/jules_camille_dore?referralExperimentNid=SOCIAL_REFERRAL_PROGRAM&referrerUsername=jules_camille_dore"
         target="_blank"
         className="mt-10 mb-5 sm:mb-0 sm:mt-20"
       >
