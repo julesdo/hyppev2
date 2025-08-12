@@ -17,7 +17,6 @@ const Footer = dynamic(() => import("./footer/Footer"));
 
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityOptions);
-  const [showPreloader, setShowPreloader] = useState(false);
 
   useEffect(() => {
     if (blobityInstance.current) {
@@ -33,49 +32,9 @@ export default function Home() {
     });
   }, []);
 
-  useEffect(() => {
-    const handlePageShow = (e: PageTransitionEvent) => {
-      // If coming back from a detail page in the same session, never show preloader
-      try {
-        if (sessionStorage.getItem('hyppe_from_detail') === '1') {
-          setShowPreloader(false);
-          sessionStorage.removeItem('hyppe_from_detail');
-          return;
-        }
-      } catch {}
-      // If page was restored from BFCache (back/forward), never show preloader
-      if ((e as any).persisted) {
-        setShowPreloader(false);
-        return;
-      }
-      // For fresh page shows, compute reload
-      try {
-        const entries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
-        const navType = entries && entries.length > 0 ? entries[0].type : undefined;
-        // Fallback for older browsers
-        // @ts-ignore
-        const legacyType = performance.navigation && performance.navigation.type;
-        const isReload = navType === "reload" || legacyType === 1;
-        // Internal client navigations should not show preloader
-        const ref = document.referrer || "";
-        const isInternalRef = ref.startsWith(window.location.origin);
-        const isInternalNav = isInternalRef && !isReload;
-        setShowPreloader(Boolean(isReload && !isInternalNav));
-      } catch {
-        setShowPreloader(false);
-      }
-    };
-
-    // Run on mount (first paint)
-    handlePageShow({ persisted: false } as any);
-    // Also handle BFCache restores
-    window.addEventListener("pageshow", handlePageShow as any);
-    return () => window.removeEventListener("pageshow", handlePageShow as any);
-  }, []);
-
   return (
     <>
-      {showPreloader && <PreLoader />}
+      <PreLoader />
 
       <NavBar />
 

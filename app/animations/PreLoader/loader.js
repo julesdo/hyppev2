@@ -28,7 +28,7 @@ export const preLoaderAnim = () => {
     })
     .to("body", {
       duration: 0.01,
-      css: { overflowY: "auto" },
+      css: { overflowY: "scroll" },
       ease: "power3.inOut",
     })
     .from(".sub", {
