@@ -1,0 +1,21 @@
+{
+  "title": "ProspectIn Architecture: Next.js + React Native + Convex + trigger.dev + Firecrawl",
+  "date": "2025-08-12T00:00:00.000Z",
+  "image": "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+  "excerpt": "Designing a platform for international, in-person prospecting with scalable workflows and measurable ROI.\n",
+  "body": {
+    "raw": "\r\nProspectIn helps independents and sales teams discover, prepare, and follow up on real‑world meetings globally.\r\n\r\n## Core modules\r\n\r\n- Discovery: Firecrawl + rotating proxies to monitor Meetup/Eventbrite/expo sites\r\n- Qualification: enrichment, speaker/attendee signals, LinkedIn profiles\r\n- Planning: calendar sync (Google/Outlook) with notes and reminders\r\n- Follow‑up: sequences triggered via CRM integration\r\n\r\n## Architecture\r\n\r\n- Next.js (web) + React Native (mobile)\r\n- Convex for realtime data + serverless functions\r\n- trigger.dev for orchestrating long‑running jobs\r\n- Workers for scraping and enrichment (isolation + retries)\r\n\r\n## ROI dashboard\r\n\r\n- Time saved vs. meetings held\r\n- Opportunities generated and conversion rate\r\n\r\nThe focus is real‑world impact: better meetings, better follow‑ups, better outcomes.\r\n\r\n\r\n",
+    "html": "<p>ProspectIn helps independents and sales teams discover, prepare, and follow up on real‑world meetings globally.</p>\n<h2>Core modules</h2>\n<ul>\n<li>Discovery: Firecrawl + rotating proxies to monitor Meetup/Eventbrite/expo sites</li>\n<li>Qualification: enrichment, speaker/attendee signals, LinkedIn profiles</li>\n<li>Planning: calendar sync (Google/Outlook) with notes and reminders</li>\n<li>Follow‑up: sequences triggered via CRM integration</li>\n</ul>\n<h2>Architecture</h2>\n<ul>\n<li>Next.js (web) + React Native (mobile)</li>\n<li>Convex for realtime data + serverless functions</li>\n<li>trigger.dev for orchestrating long‑running jobs</li>\n<li>Workers for scraping and enrichment (isolation + retries)</li>\n</ul>\n<h2>ROI dashboard</h2>\n<ul>\n<li>Time saved vs. meetings held</li>\n<li>Opportunities generated and conversion rate</li>\n</ul>\n<p>The focus is real‑world impact: better meetings, better follow‑ups, better outcomes.</p>"
+  },
+  "_id": "posts/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl.md",
+  "_raw": {
+    "sourceFilePath": "posts/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl.md",
+    "sourceFileName": "prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl.md",
+    "sourceFileDir": "posts",
+    "contentType": "markdown",
+    "flattenedPath": "posts/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl"
+  },
+  "type": "Post",
+  "url": "/blog/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl",
+  "slug": "prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl"
+}

@@ -1,0 +1,82 @@
+{
+  "cacheItemsMap": {
+    "posts/hyppe-fast-websites-automations-roi.md": {
+      "document": {
+        "title": "The Hyppe Playbook: Fast Websites + Smart Automations That Compound ROI",
+        "date": "2025-08-12T00:00:00.000Z",
+        "image": "https://images.pexels.com/photos/6727765/pexels-photo-6727765.jpeg",
+        "excerpt": "A practical, founder-friendly blueprint to ship faster sites and automate low-value work so teams can focus on growth.\n",
+        "body": {
+          "raw": "\r\nHyppe builds fast, elegant websites and automations so teams can focus on their core business. This playbook summarizes what consistently moves the needle across speed, conversion, and operations.\r\n\r\n## Why speed and automation matter\r\n\r\n- Speed drives trust and conversion. Every 100ms saved reduces friction and drop‑offs.\r\n- Automation removes low‑value work (exports, manual copy‑pastes, status pings), freeing hours weekly.\r\n- Combined, they compound ROI: more traffic converted, fewer hours wasted, clearer data.\r\n\r\n## The stack that scales\r\n\r\n- Web: Next.js (App Router), TypeScript, Tailwind, Framer Motion\r\n- Content: Ghost CMS or headless Shopify\r\n- Automations: n8n / trigger.dev, webhooks, custom workers\r\n- Data: Umami analytics, Redis cache\r\n\r\n## Three quick wins (real projects)\r\n\r\n1) Aqui Media — editorial automation and growth\r\n   - Next.js + Ghost CMS (headless) + Umami\r\n   - n8n + Node (Firecrawl) for smart monitoring and content enrichment with rotating proxies\r\n   - Result: a publishing flow that’s faster, more reliable, less manual\r\n\r\n2) Anne Mondy — headless Shopify for artists\r\n   - Next.js + Shopify GraphQL\r\n   - Express + Redis job queue to auto‑create derivative products from originals with dynamic descriptions and mockups\r\n   - Result: new inventory generated automatically, consistent copy, time saved\r\n\r\n3) Source Private Asset — reporting automation\r\n   - Next.js site redesign + n8n flows\r\n   - Automated data pulls and report distribution to investors\r\n   - Result: fewer manual steps, quicker investor updates, less risk of errors\r\n\r\n## Implementation principles\r\n\r\n- Ship thin slices fast. Measure, then scale what works.\r\n- Prefer webhooks over cron for event‑driven reliability.\r\n- Keep a clear contract between the site and the automation layer (ids, statuses, webhooks).\r\n- Track operational metrics (time saved, failure rate, retries) alongside traffic and conversion.\r\n\r\n## Common pitfalls to avoid\r\n\r\n- Over‑engineering. Start with the smallest automation that replaces a real manual step.\r\n- Black‑box workflows. Always log inputs/outputs and keep a manual fallback.\r\n- Ignoring the human loop. Automations should augment, not surprise, your team.\r\n\r\n## Where to start this week\r\n\r\n- Page speed audit → image optimization, caching, and route‑level streaming.\r\n- One manual process → turn into a webhook + worker job.\r\n- Instrument analytics and operational KPIs so you can see the impact.\r\n\r\nThe result: a site that converts and operations that scale — without adding headcount.\r\n\r\n\r\n",
+          "html": "<p>Hyppe builds fast, elegant websites and automations so teams can focus on their core business. This playbook summarizes what consistently moves the needle across speed, conversion, and operations.</p>\n<h2>Why speed and automation matter</h2>\n<ul>\n<li>Speed drives trust and conversion. Every 100ms saved reduces friction and drop‑offs.</li>\n<li>Automation removes low‑value work (exports, manual copy‑pastes, status pings), freeing hours weekly.</li>\n<li>Combined, they compound ROI: more traffic converted, fewer hours wasted, clearer data.</li>\n</ul>\n<h2>The stack that scales</h2>\n<ul>\n<li>Web: Next.js (App Router), TypeScript, Tailwind, Framer Motion</li>\n<li>Content: Ghost CMS or headless Shopify</li>\n<li>Automations: n8n / trigger.dev, webhooks, custom workers</li>\n<li>Data: Umami analytics, Redis cache</li>\n</ul>\n<h2>Three quick wins (real projects)</h2>\n<ol>\n<li>\n<p>Aqui Media — editorial automation and growth</p>\n<ul>\n<li>Next.js + Ghost CMS (headless) + Umami</li>\n<li>n8n + Node (Firecrawl) for smart monitoring and content enrichment with rotating proxies</li>\n<li>Result: a publishing flow that’s faster, more reliable, less manual</li>\n</ul>\n</li>\n<li>\n<p>Anne Mondy — headless Shopify for artists</p>\n<ul>\n<li>Next.js + Shopify GraphQL</li>\n<li>Express + Redis job queue to auto‑create derivative products from originals with dynamic descriptions and mockups</li>\n<li>Result: new inventory generated automatically, consistent copy, time saved</li>\n</ul>\n</li>\n<li>\n<p>Source Private Asset — reporting automation</p>\n<ul>\n<li>Next.js site redesign + n8n flows</li>\n<li>Automated data pulls and report distribution to investors</li>\n<li>Result: fewer manual steps, quicker investor updates, less risk of errors</li>\n</ul>\n</li>\n</ol>\n<h2>Implementation principles</h2>\n<ul>\n<li>Ship thin slices fast. Measure, then scale what works.</li>\n<li>Prefer webhooks over cron for event‑driven reliability.</li>\n<li>Keep a clear contract between the site and the automation layer (ids, statuses, webhooks).</li>\n<li>Track operational metrics (time saved, failure rate, retries) alongside traffic and conversion.</li>\n</ul>\n<h2>Common pitfalls to avoid</h2>\n<ul>\n<li>Over‑engineering. Start with the smallest automation that replaces a real manual step.</li>\n<li>Black‑box workflows. Always log inputs/outputs and keep a manual fallback.</li>\n<li>Ignoring the human loop. Automations should augment, not surprise, your team.</li>\n</ul>\n<h2>Where to start this week</h2>\n<ul>\n<li>Page speed audit → image optimization, caching, and route‑level streaming.</li>\n<li>One manual process → turn into a webhook + worker job.</li>\n<li>Instrument analytics and operational KPIs so you can see the impact.</li>\n</ul>\n<p>The result: a site that converts and operations that scale — without adding headcount.</p>"
+        },
+        "_id": "posts/hyppe-fast-websites-automations-roi.md",
+        "_raw": {
+          "sourceFilePath": "posts/hyppe-fast-websites-automations-roi.md",
+          "sourceFileName": "hyppe-fast-websites-automations-roi.md",
+          "sourceFileDir": "posts",
+          "contentType": "markdown",
+          "flattenedPath": "posts/hyppe-fast-websites-automations-roi"
+        },
+        "type": "Post",
+        "url": "/blog/hyppe-fast-websites-automations-roi",
+        "slug": "hyppe-fast-websites-automations-roi"
+      },
+      "documentHash": "1754998975997",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "posts/nextjs-performance-seo-checklist-2025.md": {
+      "document": {
+        "title": "Next.js Performance and SEO Checklist (2025 Edition)",
+        "date": "2025-08-12T00:00:00.000Z",
+        "image": "https://images.pexels.com/photos/29404574/pexels-photo-29404574.jpeg",
+        "excerpt": "A practical checklist to make your Next.js site fast, indexable, and resilient - without yak-shaving.\n",
+        "body": {
+          "raw": "\r\nA focused checklist you can run in a day to improve performance, crawlability, and perceived quality.\r\n\r\n## Rendering & data\r\n\r\n- Prefer RSC + streaming for above‑the‑fold content.\r\n- Cache at the right layer (route segment / fetch cache / CDN) with clear invalidation rules.\r\n- Co‑locate data dependencies per segment; avoid global waterfalls.\r\n\r\n## Assets\r\n\r\n- Use `next/image` with proper `sizes` and WebP/AVIF sources.\r\n- Preload critical fonts; use font subsetting; avoid layout shift.\r\n- Defer non‑essential scripts; remove unused libraries.\r\n\r\n## UI responsiveness\r\n\r\n- Animate with transforms/opacities only; avoid layout thrash.\r\n- Use `prefers-reduced-motion` for accessibility.\r\n- Keep interactions responsive under 100ms (idle work with `requestIdleCallback`).\r\n\r\n## SEO signals\r\n\r\n- Unique titles/descriptions per route; OG/Twitter images.\r\n- Clean URLs, canonical tags, and structured data for articles/products.\r\n- XML sitemap + robots; monitor coverage in Search Console.\r\n\r\n## Monitoring\r\n\r\n- Measure Core Web Vitals in production (Umami/GA + RUM).\r\n- Track error budgets and slow queries; set budgets for image weight.\r\n\r\nRun this checklist quarterly. Small fixes compound. Your visitors — and revenue — will feel the difference.\r\n\r\n\r\n",
+          "html": "<p>A focused checklist you can run in a day to improve performance, crawlability, and perceived quality.</p>\n<h2>Rendering &#x26; data</h2>\n<ul>\n<li>Prefer RSC + streaming for above‑the‑fold content.</li>\n<li>Cache at the right layer (route segment / fetch cache / CDN) with clear invalidation rules.</li>\n<li>Co‑locate data dependencies per segment; avoid global waterfalls.</li>\n</ul>\n<h2>Assets</h2>\n<ul>\n<li>Use <code>next/image</code> with proper <code>sizes</code> and WebP/AVIF sources.</li>\n<li>Preload critical fonts; use font subsetting; avoid layout shift.</li>\n<li>Defer non‑essential scripts; remove unused libraries.</li>\n</ul>\n<h2>UI responsiveness</h2>\n<ul>\n<li>Animate with transforms/opacities only; avoid layout thrash.</li>\n<li>Use <code>prefers-reduced-motion</code> for accessibility.</li>\n<li>Keep interactions responsive under 100ms (idle work with <code>requestIdleCallback</code>).</li>\n</ul>\n<h2>SEO signals</h2>\n<ul>\n<li>Unique titles/descriptions per route; OG/Twitter images.</li>\n<li>Clean URLs, canonical tags, and structured data for articles/products.</li>\n<li>XML sitemap + robots; monitor coverage in Search Console.</li>\n</ul>\n<h2>Monitoring</h2>\n<ul>\n<li>Measure Core Web Vitals in production (Umami/GA + RUM).</li>\n<li>Track error budgets and slow queries; set budgets for image weight.</li>\n</ul>\n<p>Run this checklist quarterly. Small fixes compound. Your visitors — and revenue — will feel the difference.</p>"
+        },
+        "_id": "posts/nextjs-performance-seo-checklist-2025.md",
+        "_raw": {
+          "sourceFilePath": "posts/nextjs-performance-seo-checklist-2025.md",
+          "sourceFileName": "nextjs-performance-seo-checklist-2025.md",
+          "sourceFileDir": "posts",
+          "contentType": "markdown",
+          "flattenedPath": "posts/nextjs-performance-seo-checklist-2025"
+        },
+        "type": "Post",
+        "url": "/blog/nextjs-performance-seo-checklist-2025",
+        "slug": "nextjs-performance-seo-checklist-2025"
+      },
+      "documentHash": "1754999071722",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "posts/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl.md": {
+      "document": {
+        "title": "ProspectIn Architecture: Next.js + React Native + Convex + trigger.dev + Firecrawl",
+        "date": "2025-08-12T00:00:00.000Z",
+        "image": "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+        "excerpt": "Designing a platform for international, in-person prospecting with scalable workflows and measurable ROI.\n",
+        "body": {
+          "raw": "\r\nProspectIn helps independents and sales teams discover, prepare, and follow up on real‑world meetings globally.\r\n\r\n## Core modules\r\n\r\n- Discovery: Firecrawl + rotating proxies to monitor Meetup/Eventbrite/expo sites\r\n- Qualification: enrichment, speaker/attendee signals, LinkedIn profiles\r\n- Planning: calendar sync (Google/Outlook) with notes and reminders\r\n- Follow‑up: sequences triggered via CRM integration\r\n\r\n## Architecture\r\n\r\n- Next.js (web) + React Native (mobile)\r\n- Convex for realtime data + serverless functions\r\n- trigger.dev for orchestrating long‑running jobs\r\n- Workers for scraping and enrichment (isolation + retries)\r\n\r\n## ROI dashboard\r\n\r\n- Time saved vs. meetings held\r\n- Opportunities generated and conversion rate\r\n\r\nThe focus is real‑world impact: better meetings, better follow‑ups, better outcomes.\r\n\r\n\r\n",
+          "html": "<p>ProspectIn helps independents and sales teams discover, prepare, and follow up on real‑world meetings globally.</p>\n<h2>Core modules</h2>\n<ul>\n<li>Discovery: Firecrawl + rotating proxies to monitor Meetup/Eventbrite/expo sites</li>\n<li>Qualification: enrichment, speaker/attendee signals, LinkedIn profiles</li>\n<li>Planning: calendar sync (Google/Outlook) with notes and reminders</li>\n<li>Follow‑up: sequences triggered via CRM integration</li>\n</ul>\n<h2>Architecture</h2>\n<ul>\n<li>Next.js (web) + React Native (mobile)</li>\n<li>Convex for realtime data + serverless functions</li>\n<li>trigger.dev for orchestrating long‑running jobs</li>\n<li>Workers for scraping and enrichment (isolation + retries)</li>\n</ul>\n<h2>ROI dashboard</h2>\n<ul>\n<li>Time saved vs. meetings held</li>\n<li>Opportunities generated and conversion rate</li>\n</ul>\n<p>The focus is real‑world impact: better meetings, better follow‑ups, better outcomes.</p>"
+        },
+        "_id": "posts/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl.md",
+        "_raw": {
+          "sourceFilePath": "posts/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl.md",
+          "sourceFileName": "prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl.md",
+          "sourceFileDir": "posts",
+          "contentType": "markdown",
+          "flattenedPath": "posts/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl"
+        },
+        "type": "Post",
+        "url": "/blog/prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl",
+        "slug": "prospectin-architecture-nextjs-react-native-convex-trigger-firecrawl"
+      },
+      "documentHash": "1754998636577",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    }
+  }
+}

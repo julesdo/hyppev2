@@ -1,0 +1,21 @@
+{
+  "title": "Next.js Performance and SEO Checklist (2025 Edition)",
+  "date": "2025-08-12T00:00:00.000Z",
+  "image": "https://images.pexels.com/photos/29404574/pexels-photo-29404574.jpeg",
+  "excerpt": "A practical checklist to make your Next.js site fast, indexable, and resilient - without yak-shaving.\n",
+  "body": {
+    "raw": "\r\nA focused checklist you can run in a day to improve performance, crawlability, and perceived quality.\r\n\r\n## Rendering & data\r\n\r\n- Prefer RSC + streaming for above‑the‑fold content.\r\n- Cache at the right layer (route segment / fetch cache / CDN) with clear invalidation rules.\r\n- Co‑locate data dependencies per segment; avoid global waterfalls.\r\n\r\n## Assets\r\n\r\n- Use `next/image` with proper `sizes` and WebP/AVIF sources.\r\n- Preload critical fonts; use font subsetting; avoid layout shift.\r\n- Defer non‑essential scripts; remove unused libraries.\r\n\r\n## UI responsiveness\r\n\r\n- Animate with transforms/opacities only; avoid layout thrash.\r\n- Use `prefers-reduced-motion` for accessibility.\r\n- Keep interactions responsive under 100ms (idle work with `requestIdleCallback`).\r\n\r\n## SEO signals\r\n\r\n- Unique titles/descriptions per route; OG/Twitter images.\r\n- Clean URLs, canonical tags, and structured data for articles/products.\r\n- XML sitemap + robots; monitor coverage in Search Console.\r\n\r\n## Monitoring\r\n\r\n- Measure Core Web Vitals in production (Umami/GA + RUM).\r\n- Track error budgets and slow queries; set budgets for image weight.\r\n\r\nRun this checklist quarterly. Small fixes compound. Your visitors — and revenue — will feel the difference.\r\n\r\n\r\n",
+    "html": "<p>A focused checklist you can run in a day to improve performance, crawlability, and perceived quality.</p>\n<h2>Rendering &#x26; data</h2>\n<ul>\n<li>Prefer RSC + streaming for above‑the‑fold content.</li>\n<li>Cache at the right layer (route segment / fetch cache / CDN) with clear invalidation rules.</li>\n<li>Co‑locate data dependencies per segment; avoid global waterfalls.</li>\n</ul>\n<h2>Assets</h2>\n<ul>\n<li>Use <code>next/image</code> with proper <code>sizes</code> and WebP/AVIF sources.</li>\n<li>Preload critical fonts; use font subsetting; avoid layout shift.</li>\n<li>Defer non‑essential scripts; remove unused libraries.</li>\n</ul>\n<h2>UI responsiveness</h2>\n<ul>\n<li>Animate with transforms/opacities only; avoid layout thrash.</li>\n<li>Use <code>prefers-reduced-motion</code> for accessibility.</li>\n<li>Keep interactions responsive under 100ms (idle work with <code>requestIdleCallback</code>).</li>\n</ul>\n<h2>SEO signals</h2>\n<ul>\n<li>Unique titles/descriptions per route; OG/Twitter images.</li>\n<li>Clean URLs, canonical tags, and structured data for articles/products.</li>\n<li>XML sitemap + robots; monitor coverage in Search Console.</li>\n</ul>\n<h2>Monitoring</h2>\n<ul>\n<li>Measure Core Web Vitals in production (Umami/GA + RUM).</li>\n<li>Track error budgets and slow queries; set budgets for image weight.</li>\n</ul>\n<p>Run this checklist quarterly. Small fixes compound. Your visitors — and revenue — will feel the difference.</p>"
+  },
+  "_id": "posts/nextjs-performance-seo-checklist-2025.md",
+  "_raw": {
+    "sourceFilePath": "posts/nextjs-performance-seo-checklist-2025.md",
+    "sourceFileName": "nextjs-performance-seo-checklist-2025.md",
+    "sourceFileDir": "posts",
+    "contentType": "markdown",
+    "flattenedPath": "posts/nextjs-performance-seo-checklist-2025"
+  },
+  "type": "Post",
+  "url": "/blog/nextjs-performance-seo-checklist-2025",
+  "slug": "nextjs-performance-seo-checklist-2025"
+}
