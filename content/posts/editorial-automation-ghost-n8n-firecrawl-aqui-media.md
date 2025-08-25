@@ -5,27 +5,31 @@ image: "https://images.pexels.com/photos/18069158/pexels-photo-18069158.png"
 excerpt: "From idea to published: how a regional media brand ships faster with a fully automated editorial pipeline."
 ---
 
-Aqui Media runs on a headless stack and a robust workflow that reduces manual steps.
+Regional media runs on thin margins and constant deadlines. At Aqui Media, too many hours were lost copying content, checking sources, and fixing formatting before publishing.  
 
-## Stack
+The challenge: **publish faster without adding headcount.**
 
-- Next.js + Tailwind + Framer Motion (frontend)
-- Ghost CMS (headless) for content
-- Umami for lightweight analytics
-- n8n + Node (Firecrawl) with rotating proxies for web monitoring and enrichment
+## The Playbook
 
-## Flow
+### 1. Automate the inflow
+Instead of manually monitoring dozens of sites, we used Firecrawl to scan and capture relevant items. n8n workflows enriched and normalized them before landing in Ghost CMS as ready-to-review drafts.
 
-1. Monitor sources (Firecrawl) → enqueue relevant items
-2. Enrich and normalize → push to Ghost as drafts
-3. Human review in Ghost → publish → Next.js revalidates
-4. Alerts and reporting via email + dashboard
+### 2. Keep humans where it matters
+Editors still review and approve content, but only at the “storytelling” stage. Layout, formatting, and structure are standardized automatically.
 
-## Impact
+### 3. Streamline publishing
+Once approved, Ghost pushes directly to the Next.js frontend, with automatic revalidation. Analytics and alerts flow into dashboards and inboxes.
 
-- Faster publishing, fewer errors, consistent structure
-- Editors focus on quality and context, not plumbing
+## The Results
 
-Automating the routine increases the time spent on storytelling — where media wins.
+- **Time to publish cut in half**  
+- **Fewer errors** thanks to consistent formatting  
+- Editors **focus on stories, not plumbing**  
 
+## Lessons Learned
 
+- Automation isn’t about removing humans — it’s about freeing them to do the high-value work.  
+- Keep the workflow visible: logs, alerts, and dashboards matter.  
+- The earlier you normalize content, the fewer headaches downstream.  
+
+👉 If you run a media brand, think: *what’s repetitive every day? That’s where automation compounds impact.*

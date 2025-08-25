@@ -2,36 +2,33 @@
 title: "Headless Shopify for Artists: A Practical Guide (Anne Mondy Case Study)"
 date: "2025-08-12"
 image: "https://images.pexels.com/photos/28428592/pexels-photo-28428592.jpeg"
-excerpt: "How we built a fast, customized art storefront with Next.js and Shopify GraphQL — and automated derivative products."
+excerpt: "How we built a fast, customized art storefront — and automated derivative products to save hours of manual work."
 ---
 
-Artists need custom UX without losing Shopify’s ecosystem. Here’s the approach we used for Anne Mondy.
+Artists need two things online: **a storefront that feels unique** and **operations that don’t eat their time.**  
+For Anne Mondy, selling art wasn’t just about putting products online — it was about creating a professional experience that reflected her brand, while avoiding hours of admin for every new piece.
 
-## Architecture
+## The Playbook
 
-- Next.js App Router + Tailwind + Framer Motion
-- Shopify Storefront GraphQL API for products, collections, cart
-- Server actions for secure mutations; webhooks for sync
+### 1. Custom storefront
+We built a headless Shopify front-end with Next.js, Tailwind and motion effects. The result: a **fast, branded site** that feels like the artist, not like Shopify’s default theme.
 
-## Automation: derivative products
+### 2. Automating derivative products
+Every time a new artwork is added, an automation pipeline generates derivative products: tote bags, posters, digital mockups. No manual copy-pasting, no inconsistent names.
 
-- Express.js worker + Redis job queue
-- Triggered when a new original artwork is added in Shopify
-- Generates derivative SKUs with consistent naming
-- Creates dynamic descriptions and mockups
+### 3. Keep the best of Shopify
+Behind the scenes, Shopify still runs inventory, payments, and logistics. Headless gives freedom in design, Shopify keeps the reliability.
 
-## Why this works
+## The Results
 
-- Custom UI/UX for an artist’s brand
-- Full Shopify features (inventory, payments, shipping)
-- Automation removes hours of repetitive work
+- **New products appear automatically** when originals are added  
+- **Consistent descriptions and mockups** without manual work  
+- **Hours saved weekly**, reinvested into creating and marketing  
 
-## Lessons
+## Lessons for Creators
 
-- Keep product metadata clean; it’s the backbone of automations.
-- Rate‑limit and batch API calls; include retries and idempotency keys.
-- Model the workflow as states (queued → processing → done → failed) for observability.
+- Metadata is your backbone: keep it clean.  
+- Automations should reflect your creative workflow, not fight it.  
+- Headless = freedom to design, without losing Shopify’s engine.  
 
-If you sell art online, headless + targeted automations deliver speed, control, and compounding output.
-
-
+👉 If you’re an artist or creative, headless + automation gives you both **control and scale.**

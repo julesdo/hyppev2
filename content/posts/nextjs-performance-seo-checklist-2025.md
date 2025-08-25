@@ -2,41 +2,40 @@
 title: "Next.js Performance and SEO Checklist (2025 Edition)"
 date: "2025-08-12"
 image: "https://images.pexels.com/photos/29404574/pexels-photo-29404574.jpeg"
-excerpt: >
-  A practical checklist to make your Next.js site fast, indexable, and resilient - without yak-shaving.
+excerpt: "A practical checklist to make your Next.js site fast, indexable, and resilient — without yak-shaving."
 ---
 
-A focused checklist you can run in a day to improve performance, crawlability, and perceived quality.
+Performance isn’t magic. It’s discipline.  
+This checklist is the one we use internally to make sure every Next.js site we ship is **fast, SEO-ready, and resilient.**
 
-## Rendering & data
+## Rendering & Data
 
-- Prefer RSC + streaming for above‑the‑fold content.
-- Cache at the right layer (route segment / fetch cache / CDN) with clear invalidation rules.
-- Co‑locate data dependencies per segment; avoid global waterfalls.
+- Use React Server Components + streaming for faster above-the-fold.  
+- Cache at the right level: route segment, fetch cache, or CDN.  
+- Keep data dependencies local to each route to avoid waterfalls.  
 
 ## Assets
 
-- Use `next/image` with proper `sizes` and WebP/AVIF sources.
-- Preload critical fonts; use font subsetting; avoid layout shift.
-- Defer non‑essential scripts; remove unused libraries.
+- Always use `next/image` with WebP/AVIF.  
+- Preload critical fonts, subset them, avoid layout shifts.  
+- Remove unused scripts, defer what’s non-critical.  
 
-## UI responsiveness
+## UI Responsiveness
 
-- Animate with transforms/opacities only; avoid layout thrash.
-- Use `prefers-reduced-motion` for accessibility.
-- Keep interactions responsive under 100ms (idle work with `requestIdleCallback`).
+- Animate with transform/opacity only.  
+- Respect `prefers-reduced-motion`.  
+- Keep all interactions <100ms.  
 
-## SEO signals
+## SEO Signals
 
-- Unique titles/descriptions per route; OG/Twitter images.
-- Clean URLs, canonical tags, and structured data for articles/products.
-- XML sitemap + robots; monitor coverage in Search Console.
+- Titles + descriptions unique per route.  
+- Canonical tags + structured data for articles/products.  
+- XML sitemap, robots.txt, and monitoring via Search Console.  
 
 ## Monitoring
 
-- Measure Core Web Vitals in production (Umami/GA + RUM).
-- Track error budgets and slow queries; set budgets for image weight.
+- Track Core Web Vitals in production.  
+- Watch error rates and slow queries.  
+- Set budgets (image weight, script size).  
 
-Run this checklist quarterly. Small fixes compound. Your visitors — and revenue — will feel the difference.
-
-
+👉 Run this checklist every quarter. Small wins compound — and your SEO and revenue will thank you.

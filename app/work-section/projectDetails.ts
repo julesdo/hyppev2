@@ -14,7 +14,7 @@ export const devProjects = [
     id: 0,
     name: "Source Private Asset",
     description:
-      "Investment fund: website redesign and automated reporting workflows to streamline investor updates.",
+      "Redesigned the fund’s website and automated investor reporting. Result: faster updates, less manual work, stronger credibility with stakeholders.",
     technologies: ["Next.js", "TypeScript", "n8n"],
     github: "https://github.com/julesdo",
     demo: "https://sourceprivateassets.com/",
@@ -25,7 +25,7 @@ export const devProjects = [
     id: 1,
     name: "Anne Mondy (Headless Shopify)",
     description:
-      "Artist storefront: headless Shopify with GraphQL APIs, dynamic product generation and automated back‑office ops.",
+      "Built a fast online store for an artist, with automatic product creation and inventory synced in the background. Result: sales without extra admin effort.",
     technologies: ["Next.js", "Shopify GraphQL", "Tailwind CSS"],
     github: "https://github.com/julesdo",
     demo: "https://annemondy.com",
@@ -36,7 +36,7 @@ export const devProjects = [
     id: 2,
     name: "Aqui Media",
     description:
-      "Regional media: Next.js + Framer Motion + Tailwind, Ghost CMS headless, Umami analytics, fully automated editorial workflow with n8n + Node (firecrawl) + rotating proxy.",
+      "Delivered a media website with automated editorial workflow and GDPR-friendly analytics. Result: articles published faster, with better audience insights.",
     technologies: ["Next.js", "Framer Motion", "Ghost CMS"],
     github: "https://github.com/julesdo",
     demo: "https://aqui.media",
@@ -47,19 +47,18 @@ export const devProjects = [
     id: 5,
     name: "La Stela Company",
     description:
-      "Arts collective: Next.js site with Framer Motion and GSAP. Sections include Agenda, Team, About, and Contact.",
+      "Designed a creative website for an arts collective, showcasing agenda, team, and projects. Result: a professional presence matching their artistic identity.",
     technologies: ["Next.js", "Framer Motion", "GSAP"],
     github: "https://github.com/julesdo",
     demo: "https://stela-company.vercel.app/",
     image: require(".//../../public/projects/stela-company.png"),
     available: true,
   },
-  
   {
     id: 6,
     name: "Automated B2B Prospecting",
     description:
-      "Scraping of events (Meetup, Eventbrite, LinkedIn) → CRM enrichment → automated email sequences. Results: +60% prep time saved, +€5,000 revenue in 3 months.",
+      "Automated prospecting pipeline: events scraped, CRM enriched, and emails sequenced. Result: 60% less prep time, €5,000+ revenue in 3 months.",
     technologies: ["n8n", "Node.js", "Email Sequences"],
     github: "https://github.com/julesdo",
     demo: "",
@@ -70,7 +69,7 @@ export const devProjects = [
     id: 7,
     name: "ProspectIn",
     description:
-      "International physical prospecting platform: event discovery and enrichment, calendar sync, CRM integration, automated follow‑ups, and ROI dashboard focused on in‑person interactions.",
+      "International prospecting tool to find events, sync calendars, enrich CRM, and follow up automatically. Result: more in-person meetings, less manual chasing.",
     technologies: ["Next.js", "React Native", "Convex.dev", "trigger.dev", "firecrawl"],
     github: "https://github.com/julesdo",
     demo: "",
@@ -81,70 +80,15 @@ export const devProjects = [
     id: 8,
     name: "Anne Mondy — Derivative Products Automation",
     description:
-      "Automation pipeline to create derivative products for each original artwork added to Shopify: dynamic descriptions and mockups, job queueing, and caching.",
+      "Built an automation pipeline to generate derivative products for each new artwork. Result: product pages and visuals created instantly, saving hours of manual work.",
     technologies: ["Express.js", "Redis", "Shopify GraphQL"],
     github: "https://github.com/julesdo",
     demo: "",
     image: require(".//../../public/projects/shopify-jobs.png"),
     available: false,
   },
-  // {
-  //   id: 4,
-  //   name: "SkyWatch",
-  //   description:
-  //     "SkyWatch is a convenient and user-friendly tool that allows you to quickly and easily check the current weather and forecast for the next 2 days in any city.",
-  //   technologies: ["React", "CSS", "Chart.js"],
-  //   github: "https://github.com/victorcodess/weather-forecast-website",
-  //   demo: "https://sky-watch.vercel.app/",
-  //   image: require(".//../../public/projects/skywatch-flip.png"),
-  //   available: true,
-  // },
-  // {
-  //   id: 4,
-  //   name: "Alpaca Image Generator",
-  //   description:
-  //     "An image generator website that allows users to generate, combine, and download images.",
-  //   technologies: ["React", "CSS", "Merge Images"],
-  //   github: "https://github.com/victorcodess/alpaca-image-generator",
-  //   demo: "http://alpaca-image-generator-beta.vercel.app",
-  //   image: require(".//../../public/projects/alpaca-flip.png"),
-  //   available: true,
-  // },
-
-  // {
-  //   id: 5,
-  //   name: "Link Shortener",
-  //   description:
-  //     "A website that reduces the length of your URL using Bit.ly's API",
-  //   technologies: ["JavaScript", "CSS", "Bit.ly's API"],
-  //   github: "https://github.com/victorcodess/url-shortener",
-  //   demo: "https://url-shortener-nine-delta.vercel.app",
-  //   image: require(".//../../public/projects/shortener-new.webp"),
-  //   available: true,
-  // },
-  // {
-  //   id: 6,
-  //   name: "Carpooling Service",
-  //   description:
-  //     "TMTM helps Covenant University students find fellow students who are headed to the same location, so they can share a ride and split the cost.",
-  //   technologies: ["Material UI", "React", "Formik"],
-  //   github: "https://github.com/victorcodess/carpooling-service",
-  //   demo: "",
-  //   image: require(".//../../public/projects/carpool-new.webp"),
-  //   available: false,
-  // },
-  // {
-  //   id: 7,
-  //   name: "MLSC.ng",
-  //   description:
-  //     "This is platform for Microsoft Learn Student Ambassadors to shorten links, append their sharing IDs and generate event certificates.",
-  //   technologies: ["Next.js", "Next Auth", "Tailwind CSS"],
-  //   github: "https://github.com/msp-nigeria/mlsc.ng-frontend",
-  //   demo: "",
-  //   image: require(".//../../public/projects/mlsc.png"),
-  //   available: false,
-  // },
 ];
+
 
 export const designProjects = [
   {
