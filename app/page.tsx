@@ -12,7 +12,7 @@ import dynamic from "next/dynamic";
 const Work = dynamic(() => import("./work-section/Work"));
 const Services = dynamic(() => import("./services-section/Services"));
 const About = dynamic(() => import("./about-section/About"));
-// const Blog = dynamic(() => import("./blog-section/BlogGrid"));
+const Blog = dynamic(() => import("./blog-section/BlogGrid"));
 const Contact = dynamic(() => import("./contact-section/Contact"));
 const Footer = dynamic(() => import("./footer/Footer"));
 
@@ -45,6 +45,7 @@ export default function Home() {
         <Work />
         <Services />
         <About />
+        <Blog />
         <Contact />
         <Footer />
       </main>

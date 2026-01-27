@@ -117,7 +117,9 @@ const ProjectCard = ({
               src={image}
               alt={name}
               fill
-              className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+              className={`object-contain p-4 transition-transform duration-500 group-hover:scale-105 ${
+                id === 3 ? "brightness-0 invert" : ""
+              }`}
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>

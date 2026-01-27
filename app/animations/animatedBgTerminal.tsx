@@ -266,12 +266,34 @@ export default function FaultyTerminal({
 }: FaultyTerminalProps) {
   // Handle SSR - only render on client
   const [isMounted, setIsMounted] = useState(false);
-  const dpr = dprProp ?? (typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isPausedAfterLoad, setIsPausedAfterLoad] = useState(false);
+  const dpr = dprProp ?? (typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 2) : 1);
   const containerRef = useRef<HTMLDivElement>(null);
   
+  // Detect mobile devices
   useEffect(() => {
     setIsMounted(true);
+    const checkMobile = () => {
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+        || window.innerWidth < 768;
+      setIsMobile(isMobileDevice);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
+  
+  // Auto-pause on mobile after page load animation completes
+  useEffect(() => {
+    if (isMobile && pageLoadAnimation && isMounted) {
+      // Wait for the page load animation to complete (2s) + a small buffer
+      const timer = setTimeout(() => {
+        setIsPausedAfterLoad(true);
+      }, 2500);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile, pageLoadAnimation, isMounted]);
   const programRef = useRef<Program>(null);
   const rendererRef = useRef<Renderer>(null);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
@@ -333,7 +355,7 @@ export default function FaultyTerminal({
           value: new Float32Array([smoothMouseRef.current.x, smoothMouseRef.current.y])
         },
         uMouseStrength: { value: mouseStrength },
-        uUseMouse: { value: mouseReact ? 1 : 0 },
+        uUseMouse: { value: (mouseReact && !isMobile) ? 1 : 0 },
         uPageLoadProgress: { value: pageLoadAnimation ? 0 : 1 },
         uUsePageLoadAnimation: { value: pageLoadAnimation ? 1 : 0 },
         uBrightness: { value: brightness }
@@ -360,14 +382,29 @@ export default function FaultyTerminal({
     resizeObserver.observe(ctn);
     resize();
 
-    const update = (t: number) => {
-      rafRef.current = requestAnimationFrame(update);
+    // Effective pause state: either manually paused or auto-paused on mobile after load
+    const shouldPause = pause || isPausedAfterLoad;
 
+    const update = (t: number) => {
       if (pageLoadAnimation && loadAnimationStartRef.current === 0) {
         loadAnimationStartRef.current = t;
       }
 
-      if (!pause) {
+      // Check if we should stop the animation loop entirely (mobile after load)
+      const loadAnimationComplete = pageLoadAnimation 
+        ? (t - loadAnimationStartRef.current) >= 2000 
+        : true;
+      
+      if (shouldPause && loadAnimationComplete) {
+        // On mobile after load: render one final frame and stop the loop
+        program.uniforms.iTime.value = frozenTimeRef.current;
+        renderer.render({ scene: mesh });
+        return; // Stop the animation loop
+      }
+
+      rafRef.current = requestAnimationFrame(update);
+
+      if (!pause && !isPausedAfterLoad) {
         const elapsed = (t * 0.001 + timeOffsetRef.current) * timeScale;
         program.uniforms.iTime.value = elapsed;
         frozenTimeRef.current = elapsed;
@@ -382,7 +419,8 @@ export default function FaultyTerminal({
         program.uniforms.uPageLoadProgress.value = progress;
       }
 
-      if (mouseReact) {
+      // Disable mouse react on mobile to save resources
+      if (mouseReact && !isMobile) {
         const dampingFactor = 0.08;
         const smoothMouse = smoothMouseRef.current;
         const mouse = mouseRef.current;
@@ -399,12 +437,13 @@ export default function FaultyTerminal({
     rafRef.current = requestAnimationFrame(update);
     ctn.appendChild(gl.canvas);
 
-    if (mouseReact) ctn.addEventListener('mousemove', handleMouseMove);
+    // Only add mouse listener on desktop
+    if (mouseReact && !isMobile) ctn.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       cancelAnimationFrame(rafRef.current);
       resizeObserver.disconnect();
-      if (mouseReact) ctn.removeEventListener('mousemove', handleMouseMove);
+      if (mouseReact && !isMobile) ctn.removeEventListener('mousemove', handleMouseMove);
       if (gl.canvas.parentElement === ctn) ctn.removeChild(gl.canvas);
       gl.getExtension('WEBGL_lose_context')?.loseContext();
       loadAnimationStartRef.current = 0;
@@ -412,6 +451,8 @@ export default function FaultyTerminal({
     };
   }, [
     isMounted,
+    isMobile,
+    isPausedAfterLoad,
     dpr,
     pause,
     timeScale,

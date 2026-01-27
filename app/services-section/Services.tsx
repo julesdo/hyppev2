@@ -7,8 +7,8 @@ const services = [
     id: 1,
     title: "Architecture",
     subtitle: "Systèmes Scalables",
-    description:
-      "Je conçois des architectures modulaires et maintenables. Domain-Driven Design, Clean Architecture, et patterns éprouvés pour des produits qui durent.",
+    descriptionHtml:
+      "Je conçois des architectures modulaires et maintenables avec <strong>Next.js</strong>, <strong>NestJS</strong> et <strong>PostgreSQL</strong>. Domain-Driven Design, Clean Architecture, et patterns éprouvés pour des produits qui scalent.",
     features: ["Next.js 16 App Router", "NestJS / Node.js", "PostgreSQL / Redis", "Microservices"],
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -20,8 +20,8 @@ const services = [
     id: 2,
     title: "AI Engineering",
     subtitle: "RAG & LLM Pipelines",
-    description:
-      "J'implémente des systèmes IA qui fonctionnent en production. Recherche hybride, embeddings vectoriels, et orchestration de modèles pour des applications intelligentes.",
+    descriptionHtml:
+      "J'implémente des systèmes IA production-ready. <strong>RAG Pipelines</strong>, <strong>Semantic Search</strong> avec <strong>Pinecone</strong>, et orchestration de modèles pour des applications intelligentes.",
     features: ["Vector Search (Pinecone)", "OpenAI / Anthropic SDK", "RAG Pipelines", "Streaming Responses"],
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -33,8 +33,8 @@ const services = [
     id: 3,
     title: "Performance",
     subtitle: "Core Web Vitals 100/100",
-    description:
-      "J'optimise chaque milliseconde. SSR, ISR, Edge Functions, et stratégies de cache pour des expériences instantanées qui convertissent.",
+    descriptionHtml:
+      "J'optimise chaque milliseconde. <strong>SSR</strong>, <strong>ISR</strong>, <strong>Edge Functions</strong>, et stratégies de cache pour des expériences instantanées qui convertissent.",
     features: ["SSR / ISR / Edge", "Image Optimization", "Bundle Analysis", "Lighthouse 100/100"],
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -119,9 +119,10 @@ const Services = () => {
               </p>
 
               {/* Description */}
-              <p className="mb-6 text-[14px] leading-relaxed text-[#e4ded7]/60 md:text-[15px]">
-                {service.description}
-              </p>
+              <p 
+                className="mb-6 text-[14px] leading-relaxed text-[#e4ded7]/60 md:text-[15px] [&>strong]:font-semibold [&>strong]:text-[#e4ded7]"
+                dangerouslySetInnerHTML={{ __html: service.descriptionHtml }}
+              />
 
               {/* Features */}
               <div className="flex flex-wrap gap-2">

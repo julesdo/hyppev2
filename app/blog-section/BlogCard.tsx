@@ -36,7 +36,7 @@ const BlogCard = ({ title, image, url, date, available, index }: blogProps) => {
           />
         </div>
 
-        <h3 className="mt-3 break-all uppercase leading-[1em] tracking-tight line-clamp-2">
+        <h3 className="mt-3 text-[14px] font-bold uppercase leading-[1.2em] tracking-tight sm:text-[15px] md:text-[16px]">
           {title}
         </h3>
       </div>

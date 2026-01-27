@@ -25,8 +25,8 @@ export const devProjects = [
     id: 1,
     name: "AI-Native Knowledge Engine",
     description:
-      "Architecture d'un moteur de recherche 'Agentic' capable de raisonner sur des bases documentaires massives. Implémentation d'une Recherche Hybride (Reciprocal Rank Fusion) combinant embeddings vectoriels et recherche par mots-clés pour une précision chirurgicale. Streaming de données structurées via l'API OpenAI Responses.",
-    technologies: ["TypeScript 7", "Pinecone", "OpenAI SDK", "Convex", "RRF Algorithm"],
+      "Architecture d'un moteur RAG (Retrieval-Augmented Generation) 'Agentic' capable de raisonner sur des bases documentaires massives. Implémentation d'une Semantic Search hybride (Reciprocal Rank Fusion) combinant embeddings vectoriels et recherche par mots-clés pour une précision chirurgicale. Streaming de données structurées via l'API OpenAI Responses.",
+    technologies: ["RAG Pipeline", "Semantic Search", "Pinecone", "OpenAI SDK", "TypeScript"],
     github: "https://github.com/julesdo",
     demo: "https://seedmedia.vercel.app",
     image: require(".//../../public/projects/seed-preview.png"),

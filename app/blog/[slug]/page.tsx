@@ -15,7 +15,7 @@ export default function BlogPostPage({ params }: Params) {
   const post = allPosts.find((p) => p.slug === params.slug);
   if (!post) return notFound();
   return (
-    <section className="z-10 invert flex w-full flex-col items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-20 pb-24">
+    <section className="z-10 flex w-full flex-col items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-20 pb-24">
       <FromDetailFlag />
       <article className="w-[90%] max-w-[900px] text-[#e4ded7]">
         <div className="mb-6 flex items-center justify-between">

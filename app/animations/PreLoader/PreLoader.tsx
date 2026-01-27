@@ -5,6 +5,7 @@ import "./preloader.css";
 
 const PreLoader = () => {
   const [currentLine, setCurrentLine] = useState(0);
+  const [isVisible, setIsVisible] = useState<boolean | null>(null); // null = not determined yet
   
   const bootSequence = [
     { text: "> initializing system...", delay: 0 },
@@ -15,21 +16,55 @@ const PreLoader = () => {
     { text: "> system ready", delay: 1900 },
   ];
 
+  // Determine visibility on mount
   useEffect(() => {
+    // Check if this is a SPA navigation
+    const wasShownThisSession = sessionStorage.getItem("preloader-shown") === "true";
+    
+    // Detect navigation type (reload vs navigate)
+    const navEntries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
+    const navigationType = navEntries.length > 0 ? navEntries[0].type : "navigate";
+    
+    // Skip on SPA navigation (not reload, not first load)
+    const shouldSkip = wasShownThisSession && navigationType !== "reload";
+    
+    if (shouldSkip) {
+      setIsVisible(false);
+      document.body.style.overflowY = "scroll";
+    } else {
+      setIsVisible(true);
+    }
+  }, []);
+
+  // Run animation when visible
+  useEffect(() => {
+    if (isVisible !== true) return;
+
     // Animate boot sequence
+    const timers: NodeJS.Timeout[] = [];
     bootSequence.forEach((line, index) => {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         setCurrentLine(index + 1);
       }, line.delay);
+      timers.push(timer);
     });
 
     // Start exit animation after boot sequence
-    const timer = setTimeout(() => {
+    const exitTimer = setTimeout(() => {
       preLoaderAnim();
+      sessionStorage.setItem("preloader-shown", "true");
     }, 2400);
+    timers.push(exitTimer);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => {
+      timers.forEach(t => clearTimeout(t));
+    };
+  }, [isVisible]);
+
+  // Don't render until we determine visibility, or if not visible
+  if (isVisible !== true) {
+    return null;
+  }
 
   return (
     <div className="preloader">

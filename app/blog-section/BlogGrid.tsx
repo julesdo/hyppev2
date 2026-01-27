@@ -7,7 +7,7 @@ import AnimatedBody from "../animations/AnimatedBody";
 
 const Blog = () => {
   return (
-    <section className="z-10 invert flex w-full flex-col items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-20 md:pb-16 lg:pb-32">
+    <section className="z-10 flex w-full flex-col items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center pt-20 md:pb-16 lg:pb-32">
       <div
         className={`relative mb-16 flex w-full flex-col items-center justify-center gap-10  text-[#e4ded7] sm:items-center lg:max-w-[1440px]`}
       >
@@ -21,7 +21,7 @@ const Blog = () => {
           className="w-[90%] text-center text-[14px] font-semibold uppercase sm:w-[500px] md:w-[550px] md:text-[16px]"
         />
       </div>
-      <div className="lg:w- [850px] grid w-[90%] max-w-[1200px] grid-cols-1 grid-rows-3 place-content-center place-items-center gap-x-6 gap-y-6 sm:grid-rows-2 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-1">
+      <div className="grid w-[90%] max-w-[1200px] grid-cols-1 place-content-center place-items-center gap-6 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:max-w-[850px] xl:max-w-[1200px]">
         {allPosts
           .filter((p: any) => !p.draft)
           .sort((a: any, b: any) => Number(new Date(b.date)) - Number(new Date(a.date)))

@@ -1,3 +1,30 @@
 {
-  "cacheItemsMap": {}
+  "cacheItemsMap": {
+    "posts/graphrag-recherche-ia-semantique-piege.md": {
+      "document": {
+        "title": "Recherche IA : Pourquoi le \"tout-sémantique\" est un piège",
+        "date": "2026-01-27T00:00:00.000Z",
+        "image": "/vector-to-graph.png",
+        "excerpt": "Le Vector Search seul ne suffit plus. Découvrez pourquoi le GraphRAG est la nouvelle norme pour une recherche IA vraiment intelligente.\r",
+        "body": {
+          "raw": "\r\nOn ne va pas se mentir : en 2026, brancher une base vectorielle et se dire \"mon moteur de recherche est intelligent\", c'est déjà être en retard. Le sémantique pur est une illusion de compréhension. Il est \"flou\" là où vos utilisateurs exigent de la précision.\r\n\r\nEn tant que Product Engineer, j'ai vu ce mur de près : **le sémantique trouve le contexte, mais il perd la structure.**\r\n\r\n## Le problème : L'IA est \"aveugle\" aux relations\r\n\r\nLe Vector Search transforme votre texte en points dans l'espace. C'est génial pour savoir que \"contrat\" est proche de \"accord\". Mais c'est incapable de comprendre que *\"Le Contrat A annule la Clause 3 du Contrat B\"*.\r\n\r\nPour une base vectorielle classique, ce sont juste des blocs de texte. Pour un utilisateur pro, c'est une erreur critique.\r\n\r\n## La nouvelle norme : Le GraphRAG\r\n\r\nPour dépasser ça, on ne se contente plus de fusionner du lexical et du sémantique. On passe au **GraphRAG** (Knowledge Graph Augmented Generation).\r\n\r\nL'idée ? On n'indexe plus seulement des morceaux de texte, on extrait des **entités** et des **relations**.\r\n\r\n1. Le **Vector Search** localise les documents pertinents.\r\n2. Le **Knowledge Graph** navigue entre eux pour comprendre les liens logiques.\r\n3. La **Fusion (RRF)** vient ensuite équilibrer les scores pour présenter la réponse parfaite.\r\n\r\nOn utilise toujours l'algorithme RRF (Reciprocal Rank Fusion) pour garantir la pertinence :\r\n\r\n$$RRF_{score}(d) = \\sum_{r \\in R} \\frac{1}{k + r(d)}$$\r\n\r\n## Pourquoi c'est le futur de l'ingénierie\r\n\r\nEn 2026, le rôle d'un Product Engineer n'est plus de \"coder une recherche\", mais d'**architecturer un cerveau de données**.\r\n\r\n- **Précision chirurgicale** : Le graphe permet de répondre à des questions complexes de \"raisonnement\" que le sémantique rate.\r\n- **Coûts maîtrisés** : En ciblant mieux l'information grâce au graphe, on envoie moins de \"bruit\" au LLM, ce qui réduit drastiquement la consommation de tokens.\r\n- **Maintenabilité** : Une architecture hybride + graphe est bien plus facile à debugger qu'une boîte noire vectorielle.\r\n\r\n---\r\n\r\n**Leçon apprise** : Ne confiez pas votre recherche à une simple liste de vecteurs. Si vous voulez un système vraiment intelligent, donnez-lui une structure.\r\n",
+          "html": "<p>On ne va pas se mentir : en 2026, brancher une base vectorielle et se dire \"mon moteur de recherche est intelligent\", c'est déjà être en retard. Le sémantique pur est une illusion de compréhension. Il est \"flou\" là où vos utilisateurs exigent de la précision.</p>\n<p>En tant que Product Engineer, j'ai vu ce mur de près : <strong>le sémantique trouve le contexte, mais il perd la structure.</strong></p>\n<h2>Le problème : L'IA est \"aveugle\" aux relations</h2>\n<p>Le Vector Search transforme votre texte en points dans l'espace. C'est génial pour savoir que \"contrat\" est proche de \"accord\". Mais c'est incapable de comprendre que <em>\"Le Contrat A annule la Clause 3 du Contrat B\"</em>.</p>\n<p>Pour une base vectorielle classique, ce sont juste des blocs de texte. Pour un utilisateur pro, c'est une erreur critique.</p>\n<h2>La nouvelle norme : Le GraphRAG</h2>\n<p>Pour dépasser ça, on ne se contente plus de fusionner du lexical et du sémantique. On passe au <strong>GraphRAG</strong> (Knowledge Graph Augmented Generation).</p>\n<p>L'idée ? On n'indexe plus seulement des morceaux de texte, on extrait des <strong>entités</strong> et des <strong>relations</strong>.</p>\n<ol>\n<li>Le <strong>Vector Search</strong> localise les documents pertinents.</li>\n<li>Le <strong>Knowledge Graph</strong> navigue entre eux pour comprendre les liens logiques.</li>\n<li>La <strong>Fusion (RRF)</strong> vient ensuite équilibrer les scores pour présenter la réponse parfaite.</li>\n</ol>\n<p>On utilise toujours l'algorithme RRF (Reciprocal Rank Fusion) pour garantir la pertinence :</p>\n<p>$$RRF_{score}(d) = \\sum_{r \\in R} \\frac{1}{k + r(d)}$$</p>\n<h2>Pourquoi c'est le futur de l'ingénierie</h2>\n<p>En 2026, le rôle d'un Product Engineer n'est plus de \"coder une recherche\", mais d'<strong>architecturer un cerveau de données</strong>.</p>\n<ul>\n<li><strong>Précision chirurgicale</strong> : Le graphe permet de répondre à des questions complexes de \"raisonnement\" que le sémantique rate.</li>\n<li><strong>Coûts maîtrisés</strong> : En ciblant mieux l'information grâce au graphe, on envoie moins de \"bruit\" au LLM, ce qui réduit drastiquement la consommation de tokens.</li>\n<li><strong>Maintenabilité</strong> : Une architecture hybride + graphe est bien plus facile à debugger qu'une boîte noire vectorielle.</li>\n</ul>\n<hr>\n<p><strong>Leçon apprise</strong> : Ne confiez pas votre recherche à une simple liste de vecteurs. Si vous voulez un système vraiment intelligent, donnez-lui une structure.</p>"
+        },
+        "_id": "posts/graphrag-recherche-ia-semantique-piege.md",
+        "_raw": {
+          "sourceFilePath": "posts/graphrag-recherche-ia-semantique-piege.md",
+          "sourceFileName": "graphrag-recherche-ia-semantique-piege.md",
+          "sourceFileDir": "posts",
+          "contentType": "markdown",
+          "flattenedPath": "posts/graphrag-recherche-ia-semantique-piege"
+        },
+        "type": "Post",
+        "url": "/blog/graphrag-recherche-ia-semantique-piege",
+        "slug": "graphrag-recherche-ia-semantique-piege"
+      },
+      "documentHash": "1769545474905",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    }
+  }
 }
