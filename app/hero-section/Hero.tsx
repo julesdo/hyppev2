@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
 import AnimatedWords from "../animations/AnimatedWords";
 import LogoAnimated from "../logo";
-import LightPillar from "../animations/animatedBg";
+import FaultyTerminal from "../animations/animatedBgTerminal";
 
 const Hero = () => {
   return (
@@ -15,25 +15,30 @@ const Hero = () => {
       initial="initial"
       animate="animate"
     >
-      {/* Light Pillar Background Effect */}
-      <LightPillar
-        topColor="#FC5757"
-        bottomColor="#e4ded7"
-        intensity={0.8}
-        rotationSpeed={0.15}
-        interactive={true}
-        glowAmount={0.003}
-        pillarWidth={4.0}
-        pillarHeight={0.3}
-        noiseIntensity={0.3}
-        mixBlendMode="screen"
-        pillarRotation={0}
-        quality="high"
-        className="opacity-60"
-      />
+      {/* Terminal Matrix Background Effect */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <FaultyTerminal
+          scale={2.5}
+          gridMul={[4, 2]}
+          digitSize={0.8}
+          timeScale={0.1}
+          scanlineIntensity={0.05}
+          glitchAmount={1.05}
+          flickerAmount={0.1}
+          noiseAmp={0.4}
+          chromaticAberration={0}
+          curvature={0}
+          tint="#FC5757"
+          mouseReact={true}
+          mouseStrength={0.2}
+          pageLoadAnimation={true}
+          brightness={0.35}
+          className="opacity-80"
+        />
+      </div>
 
       {/* Header Bar */}
-      <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
+      <div className="absolute top-10 z-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         <div className="flex items-center gap-4">
           <Link
             href="https://cal.com/hypperun/30min"
@@ -106,7 +111,7 @@ const Hero = () => {
       </div>
 
       {/* Main Hero Content */}
-      <div className="-mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40">
+      <div className="z-10 -mt-36 flex flex-col items-center justify-center sm:-mt-20 lg:my-40 lg:-mt-2 lg:py-40">
         <div
           className={`relative flex flex-col items-center justify-center ${monaSans.className}`}
         >
@@ -163,7 +168,7 @@ const Hero = () => {
 
       {/* Bottom Section */}
       <div
-        className="absolute bottom-10 flex items-center justify-center md:bottom-10 lg:w-[90%] lg:max-w-[1440px] lg:justify-between"
+        className="absolute bottom-10 z-10 flex items-center justify-center md:bottom-10 lg:w-[90%] lg:max-w-[1440px] lg:justify-between"
       >
         <motion.div
           className="max-w-[350px] md:max-w-[400px] lg:max-w-[420px]"
