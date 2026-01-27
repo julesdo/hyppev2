@@ -1,70 +1,69 @@
 "use client";
 import Link from "next/link";
-import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LogoAnimated from "../logo";
+import { useState } from "react";
 
 const NavBar = () => {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    // first prevent the default behavior
+  const [activeSection, setActiveSection] = useState("home");
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, section: string) => {
     e.preventDefault();
-    // get the href and remove everything before the hash (#)
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    // get the element by id and use scrollIntoView
-    const elem = document.getElementById(targetId);
+    setActiveSection(section);
+    const elem = document.getElementById(section);
     elem?.scrollIntoView({
       behavior: "smooth",
     });
   };
 
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "work", label: "Work" },
+    { id: "about", label: "About" },
+    { id: "contact", label: "Contact" },
+  ];
+
   return (
-    <nav className="fixed bottom-10 left-0 right-0 z-50 my-0  mx-auto  flex w-[306px] items-center justify-center gap-1 rounded-lg bg-[#07070a]/90 px-1 py-1 text-[#e4ded7] backdrop-blur-md sm:w-[383.3px] md:p-2 lg:w-[391.3px]">
-      <div className="w-32 justify-center gap-2 invert">
-        <LogoAnimated />
+    <nav className="fixed bottom-6 left-0 right-0 z-50 mx-auto flex w-fit items-center gap-1 rounded-2xl border border-white/10 bg-[#0a0a0f]/80 p-1.5 shadow-2xl shadow-black/50 backdrop-blur-xl sm:bottom-8 sm:gap-1.5 sm:p-2">
+      {/* Navigation Links */}
+      <div className="flex items-center gap-0.5 sm:gap-1">
+        {navItems.map((item) => (
+          <Link
+            key={item.id}
+            href={`#${item.id}`}
+            onClick={(e) => handleScroll(e, item.id)}
+            aria-label={`Scroll to ${item.label} Section`}
+            data-blobity-radius="12"
+            className={`relative rounded-xl px-3 py-2 text-[11px] font-medium transition-all duration-300 sm:px-4 sm:py-2.5 sm:text-[13px] ${
+              activeSection === item.id
+                ? "bg-white/10 text-white"
+                : "text-white/60 hover:bg-white/5 hover:text-white"
+            }`}
+          >
+            {item.label}
+            {activeSection === item.id && (
+              <span className="absolute bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-white" />
+            )}
+          </Link>
+        ))}
       </div>
 
-      <Link
-        href="#home"
-        data-blobity-magnetic="false"
-        onClick={handleScroll}
-        aria-label="Scroll to Home Section"
-      >
-        <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
-          Home
-        </h4>
-      </Link>
-      <Link
-        href="#work"
-        data-blobity-magnetic="false"
-        onClick={handleScroll}
-        aria-label="Scroll to Work Section"
-      >
-        <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
-          Work
-        </h4>
-      </Link>
+      {/* Separator */}
+      <div className="mx-1 h-6 w-px bg-white/10 sm:mx-2" />
 
+      {/* Malt CTA */}
       <Link
-        href="#about"
-        data-blobity-magnetic="false"
-        onClick={handleScroll}
-        aria-label="Scroll to About Section"
+        href="https://www.malt.fr/profile/julescamilledore"
+        target="_blank"
+        aria-label="Hire me on Malt"
+        data-blobity-radius="12"
+        className="group flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-[#FC5757] to-[#ff6b6b] px-3 py-2 text-[11px] font-semibold text-white shadow-lg shadow-[#FC5757]/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#FC5757]/30 sm:px-4 sm:py-2.5 sm:text-[12px]"
       >
-        <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
-          About
-        </h4>
-      </Link>
-
-      <Link
-        href="#contact"
-        data-blobity-magnetic="false"
-        onClick={handleScroll}
-        aria-label="Scroll to Contact Section"
-      >
-        <h4 className="rounded py-2 px-2 sm:px-4 text-[12px] sm:text-[14px] md:py-1 md:px-4">
-          Contact
-        </h4>
+        <span className="relative flex h-1.5 w-1.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" />
+          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
+        </span>
+        <span className="hidden sm:inline">Hire me</span>
+        <span className="sm:hidden">Malt</span>
+        <span className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
       </Link>
     </nav>
   );

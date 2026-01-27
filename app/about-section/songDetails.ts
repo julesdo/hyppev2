@@ -6,13 +6,14 @@ export type SongProps = {
 };
 
 export const songs = [
-  // Salaried
-  { title: "Obvy", artist: "Fintech", image: require(".//../../public/logos/obvy.png"), link: "https://www.obvy-app.com/" },
-  { title: "Ubiwan", artist: "B2B", image: require(".//../../public/logos/ubiwan.png"), link: "https://www.ubiwan.net/" },
-  // Independent
-  { title: "EPB-Service", artist: "SMB", image: require(".//../../public/logos/epb.png"), link: "https://www.bouyrie-services.com/" },
-  { title: "Source Private Asset", artist: "Fund", image: require(".//../../public/logos/spa.webp"), link: "https://sourceprivateassets.com/" },
-  { title: "Anne Mondy", artist: "Artist", image: require(".//../../public/logos/am.png"), link: "https://annemondy.com" },
+  // Enterprise (via Ubiwan / Groupe Coyote)
+  { title: "Ubiwan", artist: "Enterprise SaaS", image: require(".//../../public/logos/ubiwan.png"), link: "https://www.ubiwan.net/" },
+  { title: "Coyote", artist: "Industrial IoT", image: require(".//../../public/logos/coyote.png"), link: "https://www.moncoyote.com/" },
+  { title: "Fayat", artist: "BTP", image: require(".//../../public/logos/fayat.png"), link: "https://www.fayat.com/" },
+  { title: "Sarrion", artist: "BTP", image: require(".//../../public/logos/logo-sarrion.png"), link: "https://www.sarrion.fr/" },
+  // Freelance Clients
   { title: "Aqui Media", artist: "Media", image: require(".//../../public/logos/aquimedia.png"), link: "https://aqui.media" },
-  { title: "La Stela Company", artist: "Artist company", image: require(".//../../public/logos/stela.png"), link: "https://stela-company.vercel.app/" },
+  { title: "Anne Mondy", artist: "E-commerce", image: require(".//../../public/logos/am.png"), link: "https://annemondy.com" },
+  { title: "Obvy", artist: "Fintech", image: require(".//../../public/logos/obvy.png"), link: "https://www.obvy-app.com/" },
+  { title: "EPB-Service", artist: "SMB", image: require(".//../../public/logos/epb.png"), link: "https://www.bouyrie-services.com/" },
 ];

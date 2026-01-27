@@ -1,44 +1,52 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import AnimatedBody from "../animations/AnimatedBody";
 
 const Footer = () => {
   const year = new Date().getFullYear();
-  
+
   return (
-    <motion.section
-      className=" h-[15vh] w-full  items-center justify-center border-t-[3px] border-[#e4ded7]/30 bg-[#0E1016] pt-10  font-bold uppercase md:h-[20vh] md:py-16 lg:h-[10vh] lg:pt-6 lg:pb-0"
+    <motion.footer
+      className="w-full border-t border-[#e4ded7]/10 bg-[#0E1016] py-8"
       initial="initial"
       animate="animate"
     >
-      <motion.div className="mx-auto flex w-[90%] flex-row items-center justify-between text-center text-[12px] text-[#e4ded7] sm:text-[12px] md:text-[14px] lg:max-w-[1440px] lg:text-[14px]">
-        <AnimatedBody text={`Copyright ${year}`} className={"m-0 p-0"} />
-        <div className="flex flex-col sm:flex-row  sm:gap-1 md:gap-2">
-          <AnimatedBody
-            text={"Design & Development by"}
-            className={"m-0 p-0"}
-          />
+      <div className="mx-auto flex w-[90%] flex-col items-center gap-4 text-center lg:max-w-[1200px] lg:flex-row lg:justify-between lg:text-left">
+        {/* Left - Copyright */}
+        <p className="text-[12px] text-[#e4ded7]/50 md:text-[13px]">
+          © {year} Hyppe. All rights reserved.
+        </p>
+
+        {/* Center - Tech Signature */}
+        <p className="text-[11px] text-[#e4ded7]/30 md:text-[12px]">
+          Built with Next.js 16 · TypeScript · Vercel
+        </p>
+
+        {/* Right - Social Links */}
+        <div className="flex items-center gap-6 text-[12px] font-medium text-[#e4ded7]/50 md:text-[13px]">
           <Link
-            href="#home"
+            href="https://github.com/julesdo"
             target="_blank"
-            aria-label="Hyppe Studio"
+            className="transition-colors hover:text-[#e4ded7]"
           >
-            <span className="underline underline-offset-2 hover:no-underline">
-              <AnimatedBody text={"Hyppe"} className={"m-0 p-0"} />
-            </span>{" "}
+            GitHub
           </Link>
-          <div className="hidden lg:flex gap-3 ml-4">
-            <Link href="https://www.linkedin.com/in/jules-camille-dor%C3%A9/" target="_blank" aria-label="LinkedIn">
-              <AnimatedBody text={"LinkedIn"} className={"m-0 p-0"} />
-            </Link>
-            <span>·</span>
-            <Link href="https://www.instagram.com/julinmove/" target="_blank" aria-label="Instagram">
-              <AnimatedBody text={"Instagram"} className={"m-0 p-0"} />
-            </Link>
-          </div>
+          <Link
+            href="https://www.linkedin.com/in/jules-camille-dor%C3%A9/"
+            target="_blank"
+            className="transition-colors hover:text-[#e4ded7]"
+          >
+            LinkedIn
+          </Link>
+          <Link
+            href="https://www.malt.fr/profile/julescamilledore"
+            target="_blank"
+            className="transition-colors hover:text-[#FC5757]"
+          >
+            Malt
+          </Link>
         </div>
-      </motion.div>
-    </motion.section>
+      </div>
+    </motion.footer>
   );
 };
 

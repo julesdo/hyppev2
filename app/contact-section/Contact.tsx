@@ -1,128 +1,92 @@
 import Link from "next/link";
-import Image from "next/image";
 import { monaSans } from "../fonts/monaSans";
 import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
-import AnimatedTitle from "../animations/AnimatedTitle";
 import AnimatedWords2 from "../animations/AnimatedWords2";
 import { motion } from "framer-motion";
-import heartIcon from "../../public/heart icon.png";
 
 const Contact = () => {
   return (
     <motion.section
-      className="relative invert z-10 flex h-[95vh] w-full items-center justify-center overflow-hidden bg-[#0E1016] bg-cover bg-center py-16 md:h-[80vh] md:py-20 lg:h-[90vh] lg:pt-0 lg:pb-28 3xl:h-[75vh]"
+      className="relative z-10 flex min-h-[70vh] w-full items-center justify-center overflow-hidden bg-[#0E1016] py-20 md:min-h-[60vh] lg:py-32"
       id="contact"
       initial="initial"
       animate="animate"
     >
-      <div className="mx-auto  flex w-[90%] flex-col items-center justify-center pt-10 md:pt-0">
-        <div
-          className={`flex flex-col items-start justify-center ${monaSans.className} relative w-full sm:items-center lg:max-w-[1440px] `}
-        >
+      <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1200px]">
+        {/* Main Heading */}
+        <div className={`text-center ${monaSans.className}`}>
           <AnimatedWords2
-            title={"Let's Talk"}
-            style={
-              "flex max-w-[500px] flex-col items-start text-left text-[150px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[170px] md:text-[200px] lg:text-center lg:text-[270px] xl:text-[390px]"
-            }
-          />
-          <Image
-            src={"https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png"}
-            width={100}
-            height={100}
-            alt="Heart Icon"
-            className="heartbeat invert md:-bottom-18 absolute -bottom-5 left-64 w-[120px] sm:-bottom-14 sm:left-[40%] md:left-[40%] md:w-[150px] lg:-bottom-16 lg:left-[42%] lg:w-[230px]"
+            title={"LET'S BUILD"}
+            style="text-[60px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:text-[80px] md:text-[100px] lg:text-[140px] xl:text-[180px]"
           />
         </div>
 
-        <div className="mt-20 flex w-full flex-col items-end justify-center gap-16 sm:mt-32 sm:gap-12 md:mt-40 md:flex-row md:items-start md:justify-between lg:mt-12 lg:max-w-[1440px]">
-          <div className=" flex w-[350px] max-w-[90%] flex-col items-end text-right text-[14px] font-semibold uppercase text-[#e4ded7] sm:w-[350px] sm:text-[14px] md:w-[310px] md:items-start md:text-left md:text-[16px] lg:w-[420px] lg:text-[16px]">
-            <AnimatedBody
-              text={
-                "Questions, proposal, or want to ship a site + automations fast?"
-              }
-              className={
-                "-mb-1 inline-block overflow-hidden pt-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
-              }
-            />
-            <div className="bor der mt-5 flex w-[298px] items-center gap-1 md:w-[335px] md:gap-2.5">
-              <Link
-                href="mailto:hello@hyppe.run?subject=Lets%20work%20together!&amp;body=Hello%2C%20I%20think%20we%20need%20you%20to%20work%20on%2Fcollaborate%20this%20particular%20product...%20Reach%20out%20as%20soon%20as%20you%20can."
-                target="_blank"
-                aria-label="Send me an email"
-                className="bor der mt-1 w-[147px] flex-1 underline underline-offset-2 hover:no-underline sm:mt-2 sm:w-[170px] md:mt-3 lg:mt-4"
-              >
-                <AnimatedBody
-                  text={"Send us an email"}
-                  className={"bor der w-[190px] pr-[40px] md:w-[170px] md:pr-0"}
-                />
-              </Link>
-                <AnimatedBody
-                  text={"or"}
-                className={
-                  "bor der -mb-1 ml-2 inline-block overflow-hidden sm:-mb-2 md:-ml-[8px] md:-mb-3 lg:-mb-4"
-                }
-              />
-              <Link
-                href="https://cal.com/hypperun/30min"
-                target="_blank"
-                aria-label="Send me an email"
-                className="bor der mt-1 w-[110px] flex-1 underline underline-offset-2 hover:no-underline sm:mt-2 sm:w-[147px] md:mt-3 md:-ml-[3px] md:w-[120px] lg:mt-4"
-              >
-                <AnimatedBody
-                  text={"Book a call"}
-                  className={"w-[110px] md:w-[120px]"}
-                />
-              </Link>
-            </div>
-          </div>
+        {/* Subtitle */}
+        <motion.p
+          className="mt-6 max-w-[600px] text-center text-[16px] text-[#e4ded7]/70 md:mt-8 md:text-[18px]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          Une idée de projet ? Un besoin d'architecture ? Discutons de comment transformer votre vision en système scalable.
+        </motion.p>
 
-          <div className="flex gap-10 text-[16px] font-bold text-[#e4ded7]  sm:gap-14 sm:text-[24px] md:gap-10 md:text-[16px] lg:gap-20 lg:text-[28px]">
-            <Link
-              href="https://github.com/julesdo"
-              target="_blank"
-              aria-label="View GitHub Profile"
-            >
-              <AnimatedTitle
-                text={"GH"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/jules-camille-dor%C3%A9/"
-              target="_blank"
-              aria-label="View LinkedIn Profile"
-            >
-              <AnimatedTitle
-                text={"LN"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
-            <Link
-              href="https://www.instagram.com/julinmove/"
-              target="_blank"
-              aria-label="View Instagram Profile"
-            >
-              <AnimatedTitle
-                text={"IG"}
-                className={
-                  "text-[16px] font-bold text-[#e4ded7] sm:text-[20px] md:text-[16px] lg:text-[28px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-            </Link>
-            
-          </div>
-        </div>
+        {/* CTA Buttons */}
+        <motion.div
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6 md:mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          {/* Primary CTA - Cal.com */}
+          <Link
+            href="https://cal.com/hypperun/30min"
+            target="_blank"
+            data-blobity-radius="28"
+            className="group flex items-center gap-3 rounded-full bg-[#e4ded7] px-8 py-4 text-[14px] font-bold uppercase text-[#0E1016] transition-all hover:bg-white hover:scale-105 md:text-[16px]"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+            </span>
+            Book a Call
+          </Link>
+
+          {/* Secondary CTA - Email */}
+          <Link
+            href="mailto:julescamilledore@gmail.com?subject=Project%20Inquiry"
+            target="_blank"
+            data-blobity-radius="28"
+            className="flex items-center gap-2 rounded-full border-2 border-[#e4ded7]/30 px-8 py-4 text-[14px] font-bold uppercase text-[#e4ded7] transition-all hover:border-[#e4ded7] hover:bg-[#e4ded7]/10 md:text-[16px]"
+          >
+            julescamilledore@gmail.com
+          </Link>
+        </motion.div>
+
+        {/* Malt Badge */}
+        <motion.div
+          className="mt-12 md:mt-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+        >
+          <Link
+            href="https://www.malt.fr/profile/julescamilledore"
+            target="_blank"
+            data-blobity-radius="28"
+            className="group flex items-center gap-3 rounded-full border border-[#FC5757]/30 bg-[#FC5757]/10 px-6 py-3 transition-all hover:border-[#FC5757] hover:bg-[#FC5757]/20"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#FC5757] opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#FC5757]"></span>
+            </span>
+            <span className="text-[13px] font-medium text-[#e4ded7]/80 md:text-[14px]">
+              Disponible sur <span className="font-bold text-[#FC5757]">Malt</span> · 490€/jour
+            </span>
+            <span className="text-[#FC5757] transition-transform group-hover:translate-x-1">→</span>
+          </Link>
+        </motion.div>
       </div>
     </motion.section>
   );

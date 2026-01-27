@@ -18,7 +18,7 @@ export type reviewProps = {
 export const reviewDetails = [
   {
     name: "Aqui Media",
-    role: "Publisher",
+    role: "Media Director",
     company: "Regional Media Group",
     profileImg: alex,
     testimonial:
@@ -26,7 +26,7 @@ export const reviewDetails = [
   },
   {
     name: "Source Private Asset",
-    role: "Investment Fund",
+    role: "Asset Manager",
     company: "Asset Management",
     profileImg: jerry,
     testimonial:
@@ -62,7 +62,7 @@ export const reviewDetails = [
     company: "Early‑stage",
     profileImg: alan,
     testimonial:
-      "Clear roadmap, fast delivery, measurable conversion lift. Hyppe was the right partner for speed and quality.",
+      "Jules a transformé notre vision produit en une architecture robuste. Clear roadmap, fast delivery, measurable conversion lift.",
   },
   
 ];

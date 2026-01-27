@@ -11,38 +11,39 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Hyppe — Fast websites and smart automations",
+  title: "Jules-Camille | Senior Product Engineer & AI Architect",
   description:
-    "Hyppe builds fast, elegant websites and automated workflows so you can focus on your core business. Next.js, Shopify (headless), Ghost CMS, n8n, Convex.dev.",
+    "Expert Next.js 16 & AI-Native Architectures. Je conçois des systèmes scalables et des moteurs de recherche hybrides. Ex-Coyote Group.",
   generator: "Next.js",
   applicationName: "Hyppe",
   keywords: [
-    "hyppe",
-    "web studio",
+    "product engineer",
+    "ai architect",
     "next.js",
+    "nestjs",
+    "vector database",
+    "rag pipelines",
+    "pinecone",
+    "convex",
+    "domain-driven design",
+    "performance engineering",
+    "typescript",
     "react",
-    "automation",
-    "shopify headless",
-    "ghost cms",
-    "n8n",
-    "convex.dev",
-    "trigger.dev",
-    "landing pages",
-    "headless commerce",
-    "workflows",
-    "seo",
+    "node.js",
+    "ai-native",
+    "scalable systems",
   ],
   colorScheme: "dark",
   openGraph: {
-    title: "Hyppe — Fast websites and smart automations",
+    title: "Jules-Camille | Senior Product Engineer & AI Architect",
     description:
-      "Hyppe builds fast, elegant websites and automated workflows for founders and teams. Websites that convert, operations that scale.",
+      "Expert Next.js 16 & AI-Native Architectures. Je conçois des systèmes scalables et des moteurs de recherche hybrides. Ex-Coyote Group.",
     images: [
       {
         url: "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
         width: 1200,
         height: 630,
-        alt: "Hyppe — Fast websites and automations",
+        alt: "Jules-Camille | Senior Product Engineer & AI Architect",
       },
     ],
     locale: "en-US",
@@ -50,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hyppe — Fast websites and smart automations",
+    title: "Jules-Camille | Senior Product Engineer & AI Architect",
     description:
-      "Fast websites + automations: Next.js, Shopify headless, Ghost CMS, n8n, Convex.dev.",
+      "Expert Next.js 16 & AI-Native Architectures. Systèmes scalables et moteurs de recherche hybrides. Ex-Coyote Group.",
     images: [
       "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
     ],

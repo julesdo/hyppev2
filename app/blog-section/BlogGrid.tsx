@@ -13,7 +13,7 @@ const Blog = () => {
       >
         {" "}
         <AnimatedWords2
-          title={"Insights & Playbooks"}
+          title={"ENGINEERING LOGS"}
           style={`flex max-w-[500px] pr-5 flex-col items-start text-left ${monaSans.className} font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center lg:text-center text-[clamp(70px,10vw,155.04px)]`}
         />
         <AnimatedBody
