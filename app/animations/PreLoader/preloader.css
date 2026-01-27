@@ -9,11 +9,168 @@
   right: 0;
   z-index: 55;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden !important;
 }
 
-.preloader .texts-container {
-  height: 60px;
+/* Subtle grid background */
+.preloader-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(252, 87, 87, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252, 87, 87, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+/* Main content container */
+.preloader-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Brand/Logo */
+.preloader-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-text {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #e4ded7;
+}
+
+@media (min-width: 640px) {
+  .brand-text {
+    font-size: 64px;
+  }
+}
+
+.brand-dot {
+  width: 12px;
+  height: 12px;
+  background: #FC5757;
+  border-radius: 50%;
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* Boot terminal */
+.boot-terminal {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 12px;
+  color: #e4ded7;
+  opacity: 0.7;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background: rgba(228, 222, 215, 0.02);
+  border: 1px solid rgba(228, 222, 215, 0.1);
+  border-radius: 8px;
+  min-width: 280px;
+}
+
+@media (min-width: 640px) {
+  .boot-terminal {
+    font-size: 13px;
+    min-width: 320px;
+  }
+}
+
+.boot-line {
+  opacity: 0;
+  animation: fadeInLine 0.3s ease-out forwards;
+}
+
+.boot-line.success {
+  color: #4ade80;
+}
+
+.boot-line.latest {
+  color: #e4ded7;
+}
+
+@keyframes fadeInLine {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
+
+.cursor-blink {
+  color: #FC5757;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Tagline */
+.preloader-tagline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(228, 222, 215, 0.5);
+}
+
+@media (min-width: 640px) {
+  .preloader-tagline {
+    font-size: 14px;
+  }
+}
+
+.preloader-tagline .separator {
+  color: #FC5757;
+}
+
+/* Progress bar */
+.progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(228, 222, 215, 0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #FC5757, #e04545);
+  box-shadow: 0 0 10px rgba(252, 87, 87, 0.5);
 }

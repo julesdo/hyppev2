@@ -24,8 +24,8 @@ export const imageAnimation = {
     scale: 1,
     y: `0em`,
     transition: {
-      delay: 6.5,
-      duration: 1,
+      delay: 3.0,
+      duration: 0.8,
       ease: [0.2, 0.65, 0.3, 0.9],
     },
   },
@@ -49,9 +49,9 @@ export const wordAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1,
+      delay: 2.6,
       ease: [0.2, 0.65, 0.3, 0.9],
-      duration: 1,
+      duration: 0.8,
     },
   },
 };
@@ -81,8 +81,8 @@ export const bodyAnimation = {
     opacity: 1,
     y: `0em`,
     transition: {
-      delay: 5.5,
-      duration: 1,
+      delay: 2.8,
+      duration: 0.7,
       ease: [0.2, 0.65, 0.3, 0.9],
     },
   },

@@ -1,22 +1,81 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { preLoaderAnim } from "./loader";
 import "./preloader.css";
 
 const PreLoader = () => {
-  // Only show preloader on hard reloads (browser refresh / first navigation)
-  // If navigated via Next.js Router (soft navigation), the page won't fully reload and component won't remount, so preloader won't run.
+  const [currentLine, setCurrentLine] = useState(0);
+  
+  const bootSequence = [
+    { text: "> initializing system...", delay: 0 },
+    { text: "> loading architecture modules", delay: 400 },
+    { text: "> Next.js 16 ✓", delay: 900 },
+    { text: "> TypeScript ✓", delay: 1200 },
+    { text: "> AI/RAG pipelines ✓", delay: 1500 },
+    { text: "> system ready", delay: 1900 },
+  ];
+
   useEffect(() => {
-    preLoaderAnim();
+    // Animate boot sequence
+    bootSequence.forEach((line, index) => {
+      setTimeout(() => {
+        setCurrentLine(index + 1);
+      }, line.delay);
+    });
+
+    // Start exit animation after boot sequence
+    const timer = setTimeout(() => {
+      preLoaderAnim();
+    }, 2400);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="preloader gap-[5px] overflow-hidden text-[14px] sm:gap-[10px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
-      <div className="texts-container w-500 flex h-60 items-center justify-center gap-[5px] overflow-hidden text-[14px] font-extrabold text-[#e4ded7] opacity-0 sm:gap-[10px] sm:text-[16px] md:text-[18px] lg:text-[20px]">
-        <span>Fast Websites,</span>
-        <span>Smart Automations,</span>
-        <span>Real Impact.</span>
-        <div className="sub hidden"></div>
+    <div className="preloader">
+      {/* Subtle grid background */}
+      <div className="preloader-grid" />
+      
+      {/* Main content */}
+      <div className="preloader-content">
+        {/* Logo/Brand */}
+        <div className="preloader-brand">
+          <span className="brand-text">HYPPE</span>
+          <span className="brand-dot" />
+        </div>
+        
+        {/* Boot sequence terminal */}
+        <div className="boot-terminal">
+          {bootSequence.slice(0, currentLine).map((line, index) => (
+            <div 
+              key={index} 
+              className={`boot-line ${index === currentLine - 1 ? 'latest' : ''} ${line.text.includes('✓') ? 'success' : ''}`}
+            >
+              {line.text}
+            </div>
+          ))}
+          {currentLine < bootSequence.length && (
+            <span className="cursor-blink">_</span>
+          )}
+        </div>
+
+        {/* Tagline */}
+        <div className="preloader-tagline">
+          <span>AI-Native Engineering</span>
+          <span className="separator">·</span>
+          <span>Scalable Systems</span>
+        </div>
+      </div>
+
+      {/* Progress bar */}
+      <div className="progress-container">
+        <div 
+          className="progress-bar" 
+          style={{ 
+            width: `${(currentLine / bootSequence.length) * 100}%`,
+            transition: 'width 0.3s ease-out'
+          }} 
+        />
       </div>
     </div>
   );

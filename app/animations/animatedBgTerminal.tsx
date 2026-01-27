@@ -1,5 +1,5 @@
 import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
-import React, { useEffect, useRef, useMemo, useCallback } from 'react';
+import React, { useEffect, useRef, useMemo, useCallback, useState } from 'react';
 
 type Vec2 = [number, number];
 
@@ -257,14 +257,21 @@ export default function FaultyTerminal({
   tint = '#ffffff',
   mouseReact = true,
   mouseStrength = 0.2,
-  dpr = Math.min(window.devicePixelRatio || 1, 2),
+  dpr: dprProp,
   pageLoadAnimation = true,
   brightness = 1,
   className,
   style,
   ...rest
 }: FaultyTerminalProps) {
+  // Handle SSR - only render on client
+  const [isMounted, setIsMounted] = useState(false);
+  const dpr = dprProp ?? (typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1);
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   const programRef = useRef<Program>(null);
   const rendererRef = useRef<Renderer>(null);
   const mouseRef = useRef({ x: 0.5, y: 0.5 });
@@ -421,6 +428,11 @@ export default function FaultyTerminal({
     brightness,
     handleMouseMove
   ]);
+
+  // Don't render WebGL on server
+  if (!isMounted) {
+    return <div className={`w-full h-full relative overflow-hidden bg-[#0E1016] ${className}`} style={style} {...rest} />;
+  }
 
   return (
     <div ref={containerRef} className={`w-full h-full relative overflow-hidden ${className}`} style={style} {...rest} />
