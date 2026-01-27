@@ -295,6 +295,9 @@ export default function FaultyTerminal({
   }, []);
 
   useEffect(() => {
+    // Don't run on server or before mount
+    if (!isMounted) return;
+    
     const ctn = containerRef.current;
     if (!ctn) return;
 
@@ -408,6 +411,7 @@ export default function FaultyTerminal({
       timeOffsetRef.current = Math.random() * 100;
     };
   }, [
+    isMounted,
     dpr,
     pause,
     timeScale,
