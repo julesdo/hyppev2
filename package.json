@@ -23,7 +23,7 @@
     "framer-motion": "^10.6.1",
     "gsap": "^3.11.5",
     "katex": "^0.16.28",
-    "mermaid": "^11.12.2",
+    "mermaid": "^10.6.1",
     "next": "13.2.3",
     "next-contentlayer": "^0.3.4",
     "ogl": "^1.0.11",
