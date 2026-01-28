@@ -21,6 +21,19 @@ Pour dépasser ça, on ne se contente plus de fusionner du lexical et du sémant
 
 L'idée ? On n'indexe plus seulement des morceaux de texte, on extrait des **entités** et des **relations**.
 
+```mermaid
+flowchart LR
+    Q[Query] --> VS[Vector Search]
+    Q --> KG[Knowledge Graph]
+    VS --> |Documents| RRF[RRF Fusion]
+    KG --> |Relations| RRF
+    RRF --> LLM[LLM Response]
+    
+    style Q fill:#FC5757,color:#fff
+    style RRF fill:#FC5757,color:#fff
+    style LLM fill:#1a1d24,stroke:#e62872
+```
+
 1. Le **Vector Search** localise les documents pertinents.
 2. Le **Knowledge Graph** navigue entre eux pour comprendre les liens logiques.
 3. La **Fusion (RRF)** vient ensuite équilibrer les scores pour présenter la réponse parfaite.
