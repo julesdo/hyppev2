@@ -12,6 +12,17 @@ export type ProjectProps = {
 export const devProjects = [
   {
     id: 0,
+    name: "Seed — AI-Driven Social Prediction Engine",
+    description:
+      "Création de A à Z de Seed, une plateforme B2C temps réel gamifiant l'opinion publique. Architecture réactive par défaut grâce à Convex, permettant d'encaisser des milliers de votes simultanés avec une latence nulle, sans aucune gestion manuelle de WebSockets. Intégration d'agents IA autonomes (Cron jobs) scannant l'actualité pour générer, calibrer et publier des marchés de prédiction 24/7 sans intervention humaine.",
+    technologies: ["Next.js (App Router)", "Convex", "Autonomous AI Agents", "Real-Time Sync", "B2C Product"],
+    github: "https://github.com/julesdo",
+    demo: "https://www.playseed.io/",
+    image: require(".//../../public/projects/seed-preview.png"),
+    available: true,
+  },
+  {
+    id: 1,
     name: "High-Scale Media Engine",
     description:
       "Déploiement d'une infrastructure média haute disponibilité. Utilisation du moteur TurboPack et de l'Incremental Static Regeneration (ISR) pour servir des millions de pages statiques mises à jour en <50ms. Score Core Web Vitals de 100/100 grâce à une stratégie de cache Edge agressive.",
@@ -22,7 +33,7 @@ export const devProjects = [
     available: true,
   },
   {
-    id: 1,
+    id: 2,
     name: "AI-Native Knowledge Engine",
     description:
       "Architecture d'un moteur RAG (Retrieval-Augmented Generation) 'Agentic' capable de raisonner sur des bases documentaires massives. Implémentation d'une Semantic Search hybride (Reciprocal Rank Fusion) combinant embeddings vectoriels et recherche par mots-clés pour une précision chirurgicale. Streaming de données structurées via l'API OpenAI Responses.",
@@ -33,7 +44,7 @@ export const devProjects = [
     available: false,
   },
   {
-    id: 2,
+    id: 3,
     name: "Headless Art Commerce",
     description:
       "Transformation complète d'un workflow e-commerce via une architecture 'Headless'. Le système utilise une approche Event-Driven : des Webhooks déclenchent des agents n8n autonomes pour générer les assets et synchroniser les stocks en temps réel, éliminant 100% de l'administration manuelle.",
@@ -44,7 +55,7 @@ export const devProjects = [
     available: true,
   },
   {
-    id: 3,
+    id: 4,
     name: "Industrial IoT Supervision",
     description:
       "Conception de systèmes de supervision de flotte critiques pour Fayat TP et Sarrion (via Ubiwan / Groupe Coyote). Traduction de flux de données télématiques massifs (IoT) en tableaux de bord décisionnels temps réel, basés sur une architecture TypeScript stricte et des couches de visualisation haute performance.",
