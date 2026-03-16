@@ -40,7 +40,7 @@ export const devProjects = [
     technologies: ["RAG Pipeline", "Semantic Search", "Pinecone", "OpenAI SDK", "TypeScript"],
     github: "https://github.com/julesdo",
     demo: "https://seedmedia.vercel.app",
-    image: require(".//../../public/projects/seed-preview.png"),
+    image: require(".//../../public/convex.png"),
     available: false,
   },
   {
